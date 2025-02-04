@@ -1,4 +1,4 @@
-# Unattended Install Script for ERPNext
+# Installation Script for ERPNext
 Unattended script for ERPNext installation (Supports Versions 13, 14 and 15).
 
 This is a no-interactive script for installing ERPNext Versions 13, 14 and 15. You can set up either development or production with very minimal interaction.
@@ -32,7 +32,7 @@ Is the information correct? [Y]
 ```
 2. Add the user to sudoers:
 ```
-usermod -aG sudo frappeuser
+sudo usermod -aG sudo frappeuser
 ```
 3. Switch to created user:
 ```
@@ -73,18 +73,3 @@ Ubuntu 20.04 LTS
 Debian 10 (Buster),
 Debian 11 (Bulls Eye)
 Debian 12 (Bookworm)
-
-# NOTE:
-
-Version 15 Compatibility is set to Ubuntu 22.04 LTS and above and Debian 12 only. Lower versions are not supported for version 15 installation due to dependency issues.
-Visit https://github.com/gavindsouza/awesome-frappe to learn about other apps you can install.
-
-If you encounter spawn error on socketio when running bench restart, run the following commands:
-
-```
-bench setup socketio
-bench setup supervisor
-bench setup redis
-sudo supervisorctl reload
-```
-This will fix the spawn error and all services will restart successfully.
