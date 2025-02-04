@@ -12,6 +12,8 @@ Make sure you install the latest package versions by updating system packages if
 
 ```
 sudo apt update && sudo apt -y upgrade
+sudo apt install git
+sudo apt-get -y install supervisor
 ```
 and then reboot your machine 
 
@@ -62,6 +64,7 @@ source erpnext_install.sh
 ```
 # Compatibility
 
+Ubuntu 24.10,
 Ubuntu 24.04 LTS,
 Ubuntu 23.04 LTS,
 Ubuntu 22.04 LTS,
